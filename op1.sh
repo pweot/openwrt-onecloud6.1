@@ -1,17 +1,15 @@
-#!/bin/bash
-#
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part1.sh
-# Description: OpenWrt DIY script part 1 (Before Update feeds)
-#
+# Firewall
+echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# geodata
+# wget -q -cP files/usr/share/v2ray https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+# wget -q -cP files/usr/share/v2ray https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
 
-# Add a feed source
-echo 'src-git xd https://github.com/kenzok8/small-package.git' >>feeds.conf.default
+# Add packages
+#svn co https://github.com/ophub/luci-app-amlogic/trunk package/amlogic
+# svn co https://github.com/sbwml/luci-app-mosdns/trunk package/mosdns
+
+# passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall.git -b packages package/passwall_package
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
+echo 'src-git xd https://github.com/shiyu1314/onecloud-package' >>feeds.conf.default
