@@ -10,6 +10,9 @@ echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/c
 # svn co https://github.com/sbwml/luci-app-mosdns/trunk package/mosdns
 
 # passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall.git -b packages package/passwall_package
+#git clone https://github.com/xiaorouji/openwrt-passwall.git -b packages package/passwall_package
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
-echo 'src-git xd https://github.com/shiyu1314/onecloud-package' >>feeds.conf.default
+#echo 'src-git xd https://github.com/shiyu1314/onecloud-package' >>feeds.conf.default
+git clone https://github.com/vernesong/OpenClash.git  package/OpenClash
+git clone https://github.com/openwrt-xiaomi/luci-app-cpufreq.git  package/cpufreq
+git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
