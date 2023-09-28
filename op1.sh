@@ -17,3 +17,4 @@ git clone https://github.com/vernesong/OpenClash.git  package/OpenClash
 git clone https://github.com/openwrt-xiaomi/luci-app-cpufreq.git  package/cpufreq
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 git clone https://github.com/yuwentao114/luci-app-opkg.git package/opkg
+git clone https://github.com/ophub/luci-app-amlogic.git package/amlogic
