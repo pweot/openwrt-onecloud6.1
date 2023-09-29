@@ -19,6 +19,7 @@ echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/c
 #git clone https://github.com/xiaorouji/openwrt-passwall.git -b packages package/passwall_package
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/vssr
+git clone https://github.com/ophub/luci-app-amlogic.git package/amlogic
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 echo 'src-git xd https://github.com/shiyu1314/onecloud-package' >>feeds.conf.default
 #git clone https://github.com/openwrt-xiaomi/luci-app-cpufreq.git package/cpufreq
